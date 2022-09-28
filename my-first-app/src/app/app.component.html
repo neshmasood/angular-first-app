@@ -4,7 +4,10 @@
     <p class="description">Keeping track of the media I want to watch!</p>
   </header>
   <!-- # DOM element. custom elements need open and closing tags -->
-  <app-media-item [mediaItem]="firstMediaItem">
+  <!-- $event is a variable -->
+  <!-- (delete)="onMediaItemDelete($event)" - this is when the mediaItem component emits its delete event, we want to respond to taht by calling the app component "onMediaItemDelete" method." -->
+  <app-media-item (delete)="onMediaItemDelete($event)" 
+  [mediaItem]="firstMediaItem">
   </app-media-item>
 </section>
 
