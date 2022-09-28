@@ -1,5 +1,10 @@
 <h2> {{ mediaItem.name }}</h2>
-<div>{{ mediaItem.watchedOn }}</div>
+<!-- ngIfstructural directors -->
+<!-- <div *ngIf="mediaItem.watchedOn">Watched on {{ mediaItem.watchedOn }}</div> -->
+<!-- to use <ng-template elemst to modify teh DOM, we use this: -->
+<ng-template [ngIf]="mediaItem.watchedOn">
+    <div>Watched on {{ mediaItem.watchedOn }}</div>
+</ng-template>
 <div>{{ mediaItem.category }}</div>
 <div>{{ mediaItem.year}}</div>
 <div class="tools">
