@@ -12,8 +12,8 @@ export class MediaItemComponent {
 
 
     onDelete(){
-        console.log('deleted')
-        // this method expects to be caled with an arguement taht represents data we can send back. if there is no data to send back, we can call this event null. But its helpful to have our delet event return back what was requested to delete. We put the mediaItem class componnet in teh parameters
+        console.log('deleted');
+        // this method expects to be called with an argument that represents data we can send back. if there is no data to send back, we can call this event null. But its helpful to have our delete event return back what was requested to delete. We put the mediaItem class component in teh parameters
         this.delete.emit(this.mediaItem);
     }
 }

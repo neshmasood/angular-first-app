@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    height: calc(100% - 95px);
+    flex-direction: column;
+    padding: 10px;
+  }
+
+
+section {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+  }
+  section > media-item {
+    margin: 10px;
+  }
