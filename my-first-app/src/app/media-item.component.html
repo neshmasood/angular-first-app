@@ -1,9 +1,9 @@
-<h2> {{ mediaItem.name }}</h2>
+<h2> {{ mediaItem.name | slice: 0: 10 }}</h2>
 <!-- ngIf structural directors -->
 <!-- <div *ngIf="mediaItem.watchedOn">Watched on {{ mediaItem.watchedOn }}</div> -->
 <!-- to use <ng-template element to modify the DOM, we use this: -->
 <ng-template [ngIf]="mediaItem.watchedOn">
-    <div>Watched on {{ mediaItem.watchedOn }}</div>
+    <div>Watched on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
 </ng-template>
 <div>{{ mediaItem.category }}</div>
 <div>{{ mediaItem.year}}</div>

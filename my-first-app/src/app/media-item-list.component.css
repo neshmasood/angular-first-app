@@ -15,3 +15,13 @@ section {
   section > media-item {
     margin: 10px;
   }
+
+  h2 {
+    color: #c6c5c3;
+  }
+  section > h2 {
+    color: #53ace4;
+  }
+  section > h2 {
+    color: #45bf94;
+  }

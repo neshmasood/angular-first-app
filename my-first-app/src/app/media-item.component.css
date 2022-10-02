@@ -15,7 +15,20 @@
     flex: 1;
   }
 
-  header {
+:host(.medium-movies) {
+  border-color: #53ace4;
+}
+:host(.medium-movies) > h2 {
+  color: #53ace4;
+}
+:host(.medium-series) {
+  border-color: #45bf94;
+}
+:host(.medium-series) > h2 {
+  color: #45bf94;
+}
+
+  /* header {
     color: #c6c5c3;
   }
   header.medium-movies {
@@ -29,8 +42,10 @@
   }
   header > h2.error {
     color: #d93a3e;
-  }
-  section {
+  } */
+
+
+  /* section {
     flex: 1;
     display: flex;
     flex-flow: row wrap;
@@ -38,18 +53,12 @@
   }
   section > media-item {
     margin: 10px;
-  }
+  } */
   .tools {
     margin-top: 8px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-  }
-  .favorite {
-    width: 24px;
-    height: 24px;
-    fill: #bdc2c5;
-    cursor: pointer;
   }
   .delete {
     display: block;
