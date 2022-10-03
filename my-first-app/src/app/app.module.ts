@@ -9,6 +9,8 @@ import { CategoryListPipe } from './category-list.pipe';
 import { MediaItemFormComponent } from './media-item-form.component';
 // import { MediaItemService } from './media-item-service';
 import { lookupListToken, lookupLists } from './providers';
+import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
+import { MockXHRBackend } from './mock-xhr-backend';
 
 // const lookupLists = {
 //   mediums: ['Movies', 'Series']
@@ -23,15 +25,18 @@ import { lookupListToken, lookupLists } from './providers';
     FavoriteDirective,
     CategoryListPipe,
     MediaItemFormComponent,
+    
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
-    { provide: lookupListToken, useValue: lookupLists }
+    { provide: lookupListToken, useValue: lookupLists },
     // { provide: 'lookupListToken', useValue: lookupLists } - We no longer need this after providers.js. We use the { provide: lookupListToken, useValue: lookupLists } instead
     // MediaItemService
+    { provide: HttpXhrBackend, useClass: MockXHRBackend }
   ],
   bootstrap: [AppComponent]
 })
